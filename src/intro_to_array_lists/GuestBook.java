@@ -17,18 +17,6 @@ public class GuestBook implements ActionListener {
 		GuestBook gb = new GuestBook();
 		gb.start();
 	}
-
-	// Create a GUI with two buttons. One button reads "Add Name" and the other
-	// button reads "View Names".
-	// When the add name button is clicked, display an input dialog that asks the
-	// user to enter a name. Add
-	// that name to an ArrayList. When the "View Names" button is clicked, display a
-	// message dialog that displays
-	// all the names added to the list. Format the list as follows:
-	// Guest #1: Bob Banders
-	// Guest #2: Sandy Summers
-	// Guest #3: Greg Ganders
-	// Guest #4: Donny Doners
 	void start() {
 		JFrame f = new JFrame("S House Guestbook!");
 		JPanel p = new JPanel();
@@ -59,8 +47,14 @@ public class GuestBook implements ActionListener {
 		}
 	}
 	String getbook() {
+		String b = "Guestbook Signatures: ";
+		String append = null;
+		String a2 = null;
 		for(int i = 0; i<book.size(); i++) {
-			
+			append = book.get(i); 
+			a2 = "          ";
+			b += append + a2;
 		}
+		return b;
 	}
 }
